@@ -16,4 +16,19 @@ class EditPertanyaan extends EditRecord
             DeleteAction::make(),
         ];
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
+    protected function getCreatedNotificationTitle(): ?string
+    {
+        return 'Pertanyaan Updated';
+    }
+
+    protected function getCreatedNotificationMessage(): ?string
+    {
+        return 'The pertanyaan has been updated.';
+    }
 }

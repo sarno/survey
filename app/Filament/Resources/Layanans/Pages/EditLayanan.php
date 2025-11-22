@@ -16,4 +16,19 @@ class EditLayanan extends EditRecord
             DeleteAction::make(),
         ];
     }
+
+    protected function getRedirectUrl(): string
+    {
+        return $this->getResource()::getUrl('index');
+    }
+
+    protected function getCreatedNotificationTitle(): ?string
+    {
+        return 'Layanan Updated';
+    }
+
+    protected function getCreatedNotificationMessage(): ?string
+    {
+        return 'The layanan has been updated.';
+    }
 }

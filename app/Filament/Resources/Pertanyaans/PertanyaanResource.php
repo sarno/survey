@@ -8,19 +8,28 @@ use App\Filament\Resources\Pertanyaans\Pages\ListPertanyaans;
 use App\Filament\Resources\Pertanyaans\Schemas\PertanyaanForm;
 use App\Filament\Resources\Pertanyaans\Tables\PertanyaansTable;
 use App\Models\Pertanyaan;
-use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
+use BackedEnum;
 
 class PertanyaanResource extends Resource
 {
     protected static ?string $model = Pertanyaan::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string | UnitEnum | null $navigationGroup = 'Pengaturan';
+
+    protected static ?int $navigationSort = 0;
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-question-mark-circle';
 
     protected static ?string $recordTitleAttribute = 'Quisioner';
+
+    protected static ?string $navigationLabel = 'Pertanyaan';
+
+    protected static ?string $pluralLabel = 'Pertanyaan';
 
     public static function form(Schema $schema): Schema
     {

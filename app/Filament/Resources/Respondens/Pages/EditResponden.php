@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Filament\Resources\Instansis\Pages;
+namespace App\Filament\Resources\Respondens\Pages;
 
-use App\Filament\Resources\Instansis\InstansiResource;
+use App\Filament\Resources\Respondens\RespondenResource;
 use Filament\Actions\DeleteAction;
 use Filament\Resources\Pages\EditRecord;
 
-class EditInstansi extends EditRecord
+class EditResponden extends EditRecord
 {
-    protected static string $resource = InstansiResource::class;
+    protected static string $resource = RespondenResource::class;
 
     protected function getHeaderActions(): array
     {
@@ -24,13 +24,6 @@ class EditInstansi extends EditRecord
 
     protected function getCreatedNotificationTitle(): ?string
     {
-        return 'Instansi Updated';
+        return 'Responden Updated';
     }
-
-    protected function getCreatedNotificationMessage(): ?string
-    {
-        return 'The instansi has been updated.';
-    }
-
-    
 }

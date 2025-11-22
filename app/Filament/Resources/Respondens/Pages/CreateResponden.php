@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Filament\Resources\Pertanyaans\Pages;
+namespace App\Filament\Resources\Respondens\Pages;
 
-use App\Filament\Resources\Pertanyaans\PertanyaanResource;
+use App\Filament\Resources\Respondens\RespondenResource;
 use Filament\Resources\Pages\CreateRecord;
 
-class CreatePertanyaan extends CreateRecord
+class CreateResponden extends CreateRecord
 {
-    protected static string $resource = PertanyaanResource::class;
+    protected static string $resource = RespondenResource::class;
 
     protected function getRedirectUrl(): string
     {
@@ -16,11 +16,11 @@ class CreatePertanyaan extends CreateRecord
 
     protected function getCreatedNotificationTitle(): ?string
     {
-        return 'Pertanyaan Created';
+        return 'Responden Created';
     }
 
     protected function getCreatedNotificationMessage(): ?string
     {
-        return 'The pertanyaan has been created.';
+        return 'The responden has been created.';
     }
 }

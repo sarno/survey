@@ -10,9 +10,8 @@ class Pertanyaan extends Model
     
     protected $fillable = [
         'layanan_id',
-        'question_text',
-        'question_text_en',
-        'question_text_ar',
+        'question',
+        'order',
     ];
 
     protected $casts = [

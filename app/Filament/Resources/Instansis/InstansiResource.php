@@ -8,19 +8,29 @@ use App\Filament\Resources\Instansis\Pages\ListInstansis;
 use App\Filament\Resources\Instansis\Schemas\InstansiForm;
 use App\Filament\Resources\Instansis\Tables\InstansisTable;
 use App\Models\Instansi;
-use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
+use UnitEnum;
+use BackedEnum;
 
 class InstansiResource extends Resource
 {
     protected static ?string $model = Instansi::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Pengaturan';
+
+    protected static ?int $navigationSort = 0;
+
+    protected static string | BackedEnum | null $navigationIcon = 'heroicon-o-building-office-2';
 
     protected static ?string $recordTitleAttribute = 'Instansi';
+
+    protected static ?string $navigationLabel = 'Instansi';
+
+    protected static ?string $pluralLabel = 'Instansi';
 
     public static function form(Schema $schema): Schema
     {
